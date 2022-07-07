@@ -9,7 +9,7 @@ export interface ConnectionInfo {
 }
 
 export default function getConnectionInfo(): ConnectionInfo {
-  const connectionInfoPath = untildify('~/Library/Application Support/Local/graphql-connection-info.json')
+  const connectionInfoPath = untildify('/home/dustin/.config/Local/graphql-connection-info.json')
 
   try {
     return fs.readJsonSync(connectionInfoPath)
